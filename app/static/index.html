@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企业知识图谱与智能问答系统</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- ECharts CDN，P2 图谱可视化时启用 -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script> -->
+</head>
+<body>
+    <header class="header">
+        <h1>企业知识图谱与智能问答系统</h1>
+        <span class="version">v0.1.0 (P0 骨架)</span>
+    </header>
+
+    <main class="container">
+        <!-- 左侧：知识图谱区（P2 实现） -->
+        <section class="panel graph-panel">
+            <div class="panel-header">
+                <h2>知识图谱</h2>
+                <div class="panel-actions">
+                    <input type="text" id="searchInput" placeholder="搜索实体..." disabled>
+                    <button id="searchBtn" disabled>搜索</button>
+                </div>
+            </div>
+            <div id="graphContainer" class="graph-container">
+                <div class="placeholder">
+                    <p>知识图谱可视化</p>
+                    <p class="hint">P2 阶段实现：ECharts 力导向图、搜索定位、点击展开</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 右侧：问答区（P3 实现） -->
+        <section class="panel qa-panel">
+            <div class="panel-header">
+                <h2>智能问答</h2>
+                <span class="badge">图谱 + RAG 深度融合</span>
+            </div>
+            <div id="chatContainer" class="chat-container">
+                <div class="message system">
+                    <div class="message-content">
+                        系统已启动。P0 阶段为项目骨架，问答功能将在 P3 阶段实现。
+                        <br>请先访问 <a href="/health" target="_blank">/health</a> 检查各依赖组件状态。
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="questionInput" placeholder="输入问题..." disabled>
+                <button id="sendBtn" disabled>发送</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- 系统状态面板 -->
+    <section class="status-panel">
+        <h3>系统状态</h3>
+        <div id="statusContent" class="status-content">
+            <p>正在检查...</p>
+        </div>
+    </section>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
